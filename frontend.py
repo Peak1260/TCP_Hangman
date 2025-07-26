@@ -1,4 +1,5 @@
 import sys
+import os
 import socket
 import struct
 from PyQt5.QtWidgets import (
@@ -170,13 +171,19 @@ class HangmanClient(QWidget):
         except:
             pass
         event.accept()
+        
+def resource_path(relative_path):
+    """ Get absolute path to resource, works for dev and for PyInstaller """
+    if hasattr(sys, '_MEIPASS'):
+        # PyInstaller stores temp files here
+        return os.path.join(sys._MEIPASS, relative_path)
+    return os.path.join(os.path.abspath("."), relative_path)
 
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
 
-    # Load external stylesheet
-    with open("stylesheet.qss", "r") as f:
+    with open(resource_path("stylesheet.qss"), "r") as f:
         app.setStyleSheet(f.read())
 
     client = HangmanClient()

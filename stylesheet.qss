@@ -1,0 +1,50 @@
+#wordLabel {
+    font-family: "Courier New", monospace;
+    font-size: 28px;
+    font-weight: bold;
+    color: #2E4053; /* dark blue */
+}
+
+#wrongLabel {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: #C0392B; /* dark red */
+}
+
+#guessInput {
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+    width: 50px;
+    padding: 5px;
+    border: 2px solid #2980B9;
+    border-radius: 6px;
+    qproperty-alignment: 'AlignCenter';
+}
+
+#guessInput:disabled {
+    background-color: #dcdcdc;
+    color: #7f8c8d;
+}
+
+#guessButton {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    background-color: #2980B9;
+    color: white;
+    border-radius: 8px;
+    padding: 10px 20px;
+    border: none;
+}
+
+#guessButton:hover {
+    background-color: #3498DB;
+}
+
+#guessButton:pressed {
+    background-color: #1F618D;
+}
+
+#guessButton:disabled {
+    background-color: #95a5a6;
+    color: #7f8c8d;
+}
